@@ -1,0 +1,48 @@
+﻿<Window x:Class="BizMan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BizMan"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="800" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="EmployeeListView" ItemsSource="{Binding Employees}" Grid.Row="0" Margin="0,0,0,10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="50"/>
+                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}" Width="100"/>
+                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}" Width="100"/>
+                    <GridViewColumn Header="Position" DisplayMemberBinding="{Binding Position}" Width="120"/>
+                    <GridViewColumn Header="Department" DisplayMemberBinding="{Binding Department}" Width="120"/>
+                    <GridViewColumn Header="Hire Date" DisplayMemberBinding="{Binding HireDate}" Width="120"/>
+                    <GridViewColumn Header="Salary" DisplayMemberBinding="{Binding Salary}" Width="80"/>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}" Width="150"/>
+                    <GridViewColumn Header="Phone" DisplayMemberBinding="{Binding PhoneNumber}" Width="120"/>
+                    <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}" Width="150"/>
+                    <GridViewColumn Header="City" DisplayMemberBinding="{Binding City}" Width="100"/>
+                    <GridViewColumn Header="County" DisplayMemberBinding="{Binding County}" Width="100"/>
+                    <GridViewColumn Header="PostCode" DisplayMemberBinding="{Binding PostCode}" Width="80"/>
+                    <GridViewColumn Header="Country" DisplayMemberBinding="{Binding Country}" Width="100"/>
+                    <GridViewColumn Header="Birth Date" DisplayMemberBinding="{Binding DateOfBirth}" Width="120"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" >
+            <Button Name="AddButton" Content="Dodaj" Width="80" Margin="0,0,10,0" Click="AddButton_Click"/>
+            <Button Name="RemoveButton" Content="Usuń" Width="80" Margin="0,0,10,0" Click="RemoveButton_Click"/>
+            <Button Name="EditButton" Content="Edytuj" Width="80" Click="EditButton_Click"/>
+        </StackPanel>
+    </Grid>
+
+
+</Window>
