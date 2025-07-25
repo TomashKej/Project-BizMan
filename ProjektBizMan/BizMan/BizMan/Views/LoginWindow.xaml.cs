@@ -33,8 +33,8 @@ namespace BizMan.Views
             if (username == "grandAdmin" && password == "Admin123!")
             {
                 // Logowanie udane
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                MainMenuWindow mainMenuWindow = new MainMenuWindow();
+                mainMenuWindow.Show();
 
                 this.Close(); // shut down the login window
             }

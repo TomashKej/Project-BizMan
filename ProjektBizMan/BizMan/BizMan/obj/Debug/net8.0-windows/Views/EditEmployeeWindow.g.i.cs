@@ -53,7 +53,7 @@ namespace BizMan {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BizMan;V1.0.0.0;component/views/editemployeewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BizMan;component/views/editemployeewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\EditEmployeeWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
