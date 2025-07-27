@@ -1,0 +1,79 @@
+﻿<Window x:Class="BizMan.Views.MainMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BizMan.Views"
+        mc:Ignorable="d"
+        Title="MainMenuWindow"
+        Background="#fff"
+        WindowState="Maximized"
+        WindowStyle="SingleBorderWindow"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Top Navigation bar -->
+            <RowDefinition  Height="*"/>
+            <!-- Rest of the content -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <!-- Left Sidebar -->
+            <ColumnDefinition Width="*"/>
+            <!-- Main Content Area -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Top navigation bar -->
+        <DockPanel Grid.Row="0" Grid.ColumnSpan="2" Background="#444">
+            <Button x:Name="MenuToggleButton"
+                    Content="☰"
+                    Width="50" Height="50"
+                    Background="Transparent"
+                    Foreground="#fff"
+                    FontSize="20"
+                    BorderBrush="{x:Null}"
+                    Click="MenuToggleButton_Click"/>
+            <TextBlock Text="BizMan - Main Menu"
+                       Foreground="#fff"
+                       VerticalAlignment="Center"
+                       Margin="10,0,0,0"
+                       FontSize="16"/>
+        </DockPanel>
+
+        <!-- Left sidebar -->
+        <StackPanel x:Name="SideMenu"
+                    Grid.Row="1" Grid.Column="0"
+                    Background="#333"
+                    Width="200"
+                    Visibility="Collapsed">
+            <Button Content="Dashboard" Margin="10"
+                    Padding="10" Background="#444"
+                    Foreground="#fff" Click="DashboardButton_Click"/>
+            <Button Content="Employees" Margin="10" 
+                    Padding="10" Background="#444"
+                    Foreground="#fff" Click="EmployeeButton_Click"/>
+            <Button Content="Warehouse" Margin="10"
+                    Padding="10" Background="#444"
+                    Foreground="#fff" Click="WarehouseButton_Click"/>
+            <Button Content="Orders" Margin="10" 
+                    Padding="10" Background="#444"
+                    Foreground="#fff" Click="OrdersButton_Click"/>
+            <Button Content="Reports" Margin="10"
+                    Padding="10" Background="#444"
+                    Foreground="#fff" Click="ReportsButton_Click"/>
+            <Button Content="Transport" Margin="10"
+                    Padding="10" Background="#444"
+                    Foreground="#fff" Click="TransportButton_Click"/>
+        </StackPanel>
+
+        <!-- Main content -->
+        <Grid Grid.Row="1" Grid.Column="1" Background="#f0f0f0">
+            <TextBlock Text="Welcome to BizMan!" 
+                       FontSize="24" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>

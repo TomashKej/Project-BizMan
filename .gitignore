@@ -1,4 +1,61 @@
-# Ignore Visual Studio folders
-.vs/
+## Ignore build results
 bin/
 obj/
+out/
+
+## VS temporary files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider / JetBrains
+.idea/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Entity Framework
+Migrations/*Designer.cs
+Migrations/*Snapshot.cs
+
+## ASP.NET (jeśli użyjesz)
+wwwroot/
+
+## Logs
+*.log
+
+## Database files (if local)
+*.mdf
+*.ldf
+
+## SQL Server localdb
+*.dbmdl
+*.sql
+
+## Configuration (optional)
+appsettings.Development.json
+
+## OS-specific
+Thumbs.db
+.DS_Store
+
+## Visual Studio Code
+.vscode/
+
+## Test Results
+TestResults/
+*.coverage
+*.coveragexml
+
+## Others
+_ReSharper*/
+*.resharper
+*.DotSettings.user
